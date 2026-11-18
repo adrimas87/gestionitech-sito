@@ -51,7 +51,7 @@
     copia.addEventListener('click', function () {
       var indirizzo = copia.getAttribute('data-email');
       function fatto() {
-        copia.textContent = 'Indirizzo copiato 2713';
+        copia.textContent = 'Indirizzo copiato ✓';
         copia.classList.add('copiato');
         setTimeout(function () { copia.textContent = 'Copia indirizzo'; copia.classList.remove('copiato'); }, 2500);
       }
