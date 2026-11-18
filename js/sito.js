@@ -51,17 +51,17 @@
     copia.addEventListener('click', function () {
       var indirizzo = copia.getAttribute('data-email');
       function fatto() {
-        copia.textContent = 'Indirizzo copiato ✓';
+        copia.textContent = 'Indirizzo copiato 2713';
         copia.classList.add('copiato');
         setTimeout(function () { copia.textContent = 'Copia indirizzo'; copia.classList.remove('copiato'); }, 2500);
       }
       if (navigator.clipboard && window.isSecureContext) {
-        navigator.clipboard.writeText(indirizzo).then(fatto, function () { window.prompt('Copia l'indirizzo:', indirizzo); });
+        navigator.clipboard.writeText(indirizzo).then(fatto, function () { window.prompt("Copia l'indirizzo:", indirizzo); });
       } else {
         var t = document.createElement('textarea');
         t.value = indirizzo; t.style.position = 'fixed'; t.style.opacity = '0';
         document.body.appendChild(t); t.select();
-        try { document.execCommand('copy'); fatto(); } catch (e) { window.prompt('Copia l'indirizzo:', indirizzo); }
+        try { document.execCommand('copy'); fatto(); } catch (e) { window.prompt("Copia l'indirizzo:", indirizzo); }
         document.body.removeChild(t);
       }
     });
