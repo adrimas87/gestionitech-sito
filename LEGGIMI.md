@@ -1,6 +1,6 @@
 # Gestioni Tech - sito vetrina
 
-Sito statico (nessun server, nessun cookie, nessun modulo): `index.html` + `css/stile.css` + `img/logo.svg`.
+Sito statico (nessun server, nessun cookie, nessun modulo): `index.html` + `css/stile.css` + `js/sito.js` + `img/logo.svg`.
 Si apre con un doppio clic su `index.html` e si pubblica su qualunque hosting statico (es. GitHub Pages come EdilTermica).
 
 Da completare prima della pubblicazione:

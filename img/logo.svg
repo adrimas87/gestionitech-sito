@@ -1,6 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 48" role="img" aria-label="Gestioni Tech">
-  <rect x="2" y="6" width="36" height="36" rx="9" fill="#1F4FD8"/>
-  <path d="M27 17.5a9 9 0 1 0 2.2 6.5H21" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="31.5" cy="14.5" r="2.4" fill="#5EE2C4"/>
-  <text x="50" y="32" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#0F1B33">Gestioni<tspan fill="#1F4FD8" font-weight="600"> Tech</tspan></text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 44" role="img" aria-label="Gestioni Tech">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6D5BFF"/>
+      <stop offset="1" stop-color="#22D3EE"/>
+    </linearGradient>
+  </defs>
+  <rect x="2" y="4" width="36" height="36" rx="10" fill="url(#g)"/>
+  <path d="M27.5 15.5a9 9 0 1 0 2 7H21" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="31" cy="12.6" r="2.3" fill="#fff"/>
+  <text x="50" y="30" font-family="Sora, Inter, Segoe UI, Arial, sans-serif" font-size="21" font-weight="700" fill="#F2F4FF" letter-spacing="-0.3">Gestioni<tspan fill="#8FA2FF" font-weight="500"> Tech</tspan></text>
 </svg>

@@ -5,135 +5,175 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Gestioni Tech - Sviluppo software e soluzioni tecnologiche</title>
   <meta name="description" content="Gestioni Tech progetta e sviluppa software gestionali, applicazioni web e mobile, siti internet e soluzioni tecnologiche su misura per le imprese.">
+  <meta name="theme-color" content="#07080F">
   <link rel="canonical" href="https://www.gestionitech.it/">
   <link rel="icon" href="img/logo.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/stile.css">
 </head>
 <body>
 
-<header class="testata">
+<div class="sfondo" aria-hidden="true">
+  <div class="sfondo-griglia"></div>
+  <div class="bagliore b1"></div>
+  <div class="bagliore b2"></div>
+  <div class="bagliore b3"></div>
+</div>
+
+<header class="testata" id="testata">
   <div class="contenitore testata-riga">
-    <a href="#inizio" class="marchio"><img src="img/logo.svg" alt="Gestioni Tech" width="200" height="37"></a>
+    <a href="#inizio" class="marchio"><img src="img/logo.svg" alt="Gestioni Tech" width="190" height="34"></a>
     <input type="checkbox" id="menu-apri" class="menu-apri" aria-label="Apri il menu">
     <label for="menu-apri" class="menu-pulsante" aria-hidden="true"><span></span></label>
     <nav class="menu">
       <a href="#servizi">Servizi</a>
       <a href="#metodo">Metodo</a>
-      <a href="#chi-siamo">Chi siamo</a>
-      <a href="#contatti" class="pulsante pulsante-piccolo">Contatti</a>
+      <a href="#approccio">Approccio</a>
+      <a href="#contatti" class="pulsante pulsante-vetro">Parliamone <span class="freccia">&rarr;</span></a>
     </nav>
   </div>
 </header>
 
 <main id="inizio">
 
+  <!-- Apertura -->
   <section class="apertura">
     <div class="contenitore apertura-griglia">
-      <div>
-        <p class="sopratitolo">Sviluppo software &middot; Siti web &middot; Soluzioni tecnologiche</p>
-        <h1>Tecnologia su misura per far crescere la tua impresa</h1>
-        <p class="introduzione">Progettiamo e sviluppiamo software gestionali, applicazioni web e mobile, siti internet e integrazioni fra sistemi. Dall'analisi dei processi alla messa in esercizio, con un unico interlocutore.</p>
-        <div class="azioni">
-          <a href="#contatti" class="pulsante">Richiedi una consulenza</a>
-          <a href="#servizi" class="pulsante pulsante-chiaro">Scopri i servizi</a>
+      <div class="apertura-testo">
+        <p class="etichetta-pill rivela"><span class="punto"></span> Software house &middot; Campobasso</p>
+        <h1 class="rivela">Diamo forma alle idee<br>con il <span class="sfumato">codice</span>.</h1>
+        <p class="introduzione rivela">Software gestionali, applicazioni web e mobile, siti internet e integrazioni: progettiamo soluzioni tecnologiche su misura che rendono le imprese pi&ugrave; veloci, connesse e pronte al futuro.</p>
+        <div class="azioni rivela">
+          <a href="#contatti" class="pulsante pulsante-pieno">Avvia un progetto <span class="freccia">&rarr;</span></a>
+          <a href="#servizi" class="pulsante pulsante-vetro">Esplora i servizi</a>
         </div>
       </div>
-      <div class="apertura-figura" aria-hidden="true">
-        <div class="finestra">
-          <div class="finestra-barra"><span></span><span></span><span></span></div>
-          <div class="finestra-corpo">
-            <div class="riga r1"></div><div class="riga r2"></div>
-            <div class="riquadri"><div></div><div></div><div></div></div>
-            <div class="riga r3"></div><div class="riga r2"></div>
-          </div>
+
+      <div class="terminale rivela" aria-hidden="true">
+        <div class="terminale-barra">
+          <span class="led r"></span><span class="led g"></span><span class="led v"></span>
+          <span class="terminale-titolo">progetto.ts</span>
+        </div>
+        <pre class="terminale-codice"><code id="codice"></code><span class="cursore"></span></pre>
+        <div class="terminale-stato">
+          <span class="stato-punto"></span><span id="stato-testo">build in corso&hellip;</span>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Nastro competenze -->
+  <div class="nastro" aria-label="Competenze">
+    <div class="nastro-pista">
+      <span>Sviluppo web</span><i></i><span>App mobile</span><i></i><span>Cloud</span><i></i><span>Database</span><i></i><span>API e integrazioni</span><i></i><span>Automazione</span><i></i><span>Intelligenza artificiale</span><i></i><span>Sicurezza</span><i></i><span>UX / UI design</span><i></i>
+      <span>Sviluppo web</span><i></i><span>App mobile</span><i></i><span>Cloud</span><i></i><span>Database</span><i></i><span>API e integrazioni</span><i></i><span>Automazione</span><i></i><span>Intelligenza artificiale</span><i></i><span>Sicurezza</span><i></i><span>UX / UI design</span><i></i>
+    </div>
+  </div>
+
+  <!-- Servizi -->
   <section id="servizi" class="sezione">
     <div class="contenitore">
-      <p class="sopratitolo">Servizi</p>
-      <h2>Cosa facciamo</h2>
-      <p class="sottotitolo">Soluzioni costruite attorno al modo di lavorare dell'azienda, non il contrario.</p>
-      <div class="griglia-servizi">
-        <article class="scheda">
+      <div class="intestazione rivela">
+        <p class="sopratitolo">01 &mdash; Servizi</p>
+        <h2>Tecnologia che lavora<br><span class="sfumato">per la tua azienda</span>.</h2>
+        <p class="sottotitolo">Dall'idea al prodotto in esercizio: un unico partner per software, web e infrastruttura.</p>
+      </div>
+
+      <div class="bento">
+        <article class="scheda grande rivela">
           <div class="icona"><svg viewBox="0 0 24 24"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></svg></div>
           <h3>Software su misura</h3>
-          <p>Applicazioni gestionali progettate sui processi dell'azienda: magazzino, vendite, acquisti, amministrazione e reportistica.</p>
+          <p>Gestionali e applicazioni progettati attorno ai processi dell'impresa: magazzino, vendite, acquisti, amministrazione e analisi dei dati. Nessun compromesso con soluzioni generiche.</p>
+          <div class="mini-grafico" aria-hidden="true">
+            <span style="--h:38%"></span><span style="--h:56%"></span><span style="--h:44%"></span><span style="--h:70%"></span><span style="--h:62%"></span><span style="--h:84%"></span><span style="--h:78%"></span><span style="--h:96%"></span>
+          </div>
         </article>
-        <article class="scheda">
+
+        <article class="scheda rivela">
           <div class="icona"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18M8 21h8"/></svg></div>
           <h3>Siti web</h3>
-          <p>Siti istituzionali e vetrine aziendali veloci, sicuri e ottimizzati per i dispositivi mobili, con gestione autonoma dei contenuti.</p>
+          <p>Siti istituzionali e vetrine veloci, sicuri e curati nel design, ottimizzati per motori di ricerca e dispositivi mobili.</p>
         </article>
-        <article class="scheda">
-          <div class="icona"><svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg></div>
-          <h3>Applicazioni web e mobile</h3>
-          <p>Piattaforme accessibili dal browser e app per smartphone e tablet, collegate ai sistemi aziendali e utilizzabili anche in mobilit&agrave;.</p>
+
+        <article class="scheda rivela">
+          <div class="icona"><svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2.5"/><path d="M11 18h2"/></svg></div>
+          <h3>App web e mobile</h3>
+          <p>Piattaforme nel browser e app per smartphone e tablet, collegate ai sistemi aziendali e pronte per il lavoro in mobilit&agrave;.</p>
         </article>
-        <article class="scheda">
-          <div class="icona"><svg viewBox="0 0 24 24"><path d="M4 7h10M4 17h10M14 4l4 3-4 3M10 14l-4 3 4 3M18 7h2M4 17"/></svg></div>
+
+        <article class="scheda rivela">
+          <div class="icona"><svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M8 7.5l3 8.5M16 7.5l-3 8.5M8.5 6h7"/></svg></div>
           <h3>Integrazioni e automazioni</h3>
-          <p>Collegamento fra programmi, banche dati e servizi esterni; automazione delle attivit&agrave; ripetitive per ridurre errori e tempi di lavoro.</p>
+          <p>Programmi, banche dati e servizi esterni che dialogano tra loro. Le attivit&agrave; ripetitive si fanno da sole.</p>
         </article>
-        <article class="scheda">
+
+        <article class="scheda rivela">
+          <div class="icona"><svg viewBox="0 0 24 24"><path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/></svg></div>
+          <h3>Intelligenza artificiale</h3>
+          <p>Assistenti, ricerca nei dati aziendali e automazioni intelligenti, integrati in modo sicuro negli strumenti di tutti i giorni.</p>
+        </article>
+
+        <article class="scheda larga rivela">
           <div class="icona"><svg viewBox="0 0 24 24"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/><path d="M9 12l2 2 4-4"/></svg></div>
-          <h3>Infrastruttura e sicurezza</h3>
-          <p>Server, copie di sicurezza, accessi da remoto protetti e configurazione delle reti aziendali, con attenzione alla protezione dei dati.</p>
-        </article>
-        <article class="scheda">
-          <div class="icona"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
-          <h3>Assistenza e manutenzione</h3>
-          <p>Supporto diretto, aggiornamenti continui ed evoluzione delle soluzioni nel tempo, per accompagnare la crescita dell'impresa.</p>
+          <div>
+            <h3>Infrastruttura, sicurezza e assistenza</h3>
+            <p>Server, cloud, copie di sicurezza, accessi da remoto protetti e assistenza continuativa. Le soluzioni restano aggiornate ed evolvono insieme all'impresa.</p>
+          </div>
+          <ul class="spunte">
+            <li>Backup automatici</li><li>Accesso remoto sicuro</li><li>Aggiornamenti continui</li><li>Supporto diretto</li>
+          </ul>
         </article>
       </div>
     </div>
   </section>
 
-  <section id="metodo" class="sezione sezione-tinta">
+  <!-- Metodo -->
+  <section id="metodo" class="sezione">
     <div class="contenitore">
-      <p class="sopratitolo">Metodo</p>
-      <h2>Come lavoriamo</h2>
-      <ol class="passi">
-        <li><span class="numero">01</span><h3>Analisi</h3><p>Studiamo i processi, le esigenze e gli strumenti gi&agrave; in uso per individuare dove intervenire.</p></li>
-        <li><span class="numero">02</span><h3>Progetto</h3><p>Definiamo soluzione, tempi e costi in modo chiaro, prima di scrivere una sola riga di codice.</p></li>
-        <li><span class="numero">03</span><h3>Sviluppo</h3><p>Realizziamo per fasi, con verifiche frequenti insieme al cliente e collaudo su dati reali.</p></li>
-        <li><span class="numero">04</span><h3>Avvio e supporto</h3><p>Installazione, formazione del personale e assistenza continuativa dopo la messa in esercizio.</p></li>
+      <div class="intestazione rivela">
+        <p class="sopratitolo">02 &mdash; Metodo</p>
+        <h2>Dal problema alla soluzione,<br><span class="sfumato">in quattro fasi</span>.</h2>
+      </div>
+      <ol class="percorso">
+        <li class="rivela"><span class="numero">01</span><h3>Analisi</h3><p>Studiamo processi, esigenze e strumenti in uso per capire dove la tecnologia crea valore.</p></li>
+        <li class="rivela"><span class="numero">02</span><h3>Progetto</h3><p>Architettura, interfacce, tempi e costi definiti con chiarezza prima di scrivere codice.</p></li>
+        <li class="rivela"><span class="numero">03</span><h3>Sviluppo</h3><p>Rilasci progressivi, verifiche frequenti con il cliente e collaudo su dati reali.</p></li>
+        <li class="rivela"><span class="numero">04</span><h3>Evoluzione</h3><p>Avvio, formazione e supporto continuo: la soluzione cresce insieme all'azienda.</p></li>
       </ol>
     </div>
   </section>
 
-  <section id="chi-siamo" class="sezione">
-    <div class="contenitore chi-griglia">
-      <div>
-        <p class="sopratitolo">Chi siamo</p>
-        <h2>Competenza tecnica e conoscenza dell'impresa</h2>
-        <p>Gestioni Tech nasce dall'esperienza maturata nello sviluppo di soluzioni gestionali utilizzate ogni giorno da aziende commerciali e di servizi. Uniamo competenze di programmazione, sistemi e amministrazione aziendale per realizzare strumenti affidabili, pensati per chi li usa.</p>
-        <p>Seguiamo ogni progetto direttamente, dalla prima analisi all'assistenza nel tempo: un rapporto diretto, senza passaggi intermedi.</p>
+  <!-- Approccio -->
+  <section id="approccio" class="sezione">
+    <div class="contenitore approccio">
+      <div class="rivela">
+        <p class="sopratitolo">03 &mdash; Approccio</p>
+        <h2>Ingegneria del software<br>con la <span class="sfumato">mentalit&agrave; dell'impresa</span>.</h2>
+        <p class="sottotitolo">Gestioni Tech nasce dall'esperienza nello sviluppo di soluzioni gestionali utilizzate ogni giorno da aziende commerciali e di servizi. Uniamo programmazione, sistemi e conoscenza dei processi aziendali per creare strumenti affidabili, pensati per chi li usa.</p>
       </div>
-      <ul class="valori">
-        <li><strong>Su misura</strong><span>Ogni soluzione parte dal modo di lavorare del cliente.</span></li>
-        <li><strong>Affidabilit&agrave;</strong><span>Dati protetti, copie di sicurezza e continuit&agrave; operativa.</span></li>
-        <li><strong>Chiarezza</strong><span>Tempi, costi e responsabilit&agrave; definiti fin dall'inizio.</span></li>
-        <li><strong>Continuit&agrave;</strong><span>Aggiornamenti ed evoluzione costante delle soluzioni.</span></li>
-      </ul>
+      <div class="pilastri">
+        <div class="pilastro rivela"><span class="pilastro-icona">&#9670;</span><div><strong>Su misura</strong><p>Ogni soluzione parte dal modo di lavorare del cliente.</p></div></div>
+        <div class="pilastro rivela"><span class="pilastro-icona">&#9670;</span><div><strong>Sicurezza dei dati</strong><p>Protezione, copie di sicurezza e continuit&agrave; operativa by design.</p></div></div>
+        <div class="pilastro rivela"><span class="pilastro-icona">&#9670;</span><div><strong>Tecnologie moderne</strong><p>Architetture scalabili, interfacce curate, prestazioni elevate.</p></div></div>
+        <div class="pilastro rivela"><span class="pilastro-icona">&#9670;</span><div><strong>Rapporto diretto</strong><p>Un unico interlocutore dalla prima analisi all'assistenza.</p></div></div>
+      </div>
     </div>
   </section>
 
-  <section id="contatti" class="sezione sezione-scura">
-    <div class="contenitore contatti-griglia">
-      <div>
-        <p class="sopratitolo sopratitolo-chiaro">Contatti</p>
-        <h2>Parliamo del tuo progetto</h2>
-        <p>Raccontaci le esigenze della tua azienda: ti risponderemo con una prima valutazione, senza impegno.</p>
-      </div>
-      <div class="contatti-riquadro">
-        <p><span class="etichetta">E-mail</span><a href="mailto:info@gestionitech.it">info@gestionitech.it</a></p>
-        <p><span class="etichetta">Sede</span>Campobasso</p>
-        <a href="mailto:info@gestionitech.it?subject=Richiesta%20informazioni" class="pulsante pulsante-chiaro">Scrivici</a>
+  <!-- Contatti -->
+  <section id="contatti" class="sezione">
+    <div class="contenitore">
+      <div class="invito rivela">
+        <div class="invito-luce" aria-hidden="true"></div>
+        <p class="sopratitolo">04 &mdash; Contatti</p>
+        <h2>Hai un progetto in mente?<br><span class="sfumato">Costruiamolo insieme.</span></h2>
+        <p class="sottotitolo">Raccontaci le esigenze della tua azienda: ti risponderemo con una prima valutazione, senza impegno.</p>
+        <div class="azioni centrate">
+          <a href="mailto:info@gestionitech.it?subject=Richiesta%20informazioni" class="pulsante pulsante-pieno">info@gestionitech.it <span class="freccia">&rarr;</span></a>
+        </div>
+        <p class="invito-sede">Campobasso &middot; Italia</p>
       </div>
     </div>
   </section>
@@ -142,12 +182,11 @@
 
 <footer class="piede">
   <div class="contenitore piede-riga">
+    <img src="img/logo.svg" alt="Gestioni Tech" width="150" height="27">
     <p>&copy; <span id="anno">2026</span> Gestioni Tech S.r.l. in costituzione &middot; Campobasso</p>
-    <p class="piede-note">Promotore: Adriano Mastronunzio &middot; <a href="mailto:info@gestionitech.it">info@gestionitech.it</a></p>
   </div>
 </footer>
 
-<script>document.getElementById('anno').textContent = new Date().getFullYear();
-document.querySelectorAll('.menu a').forEach(function (a) { a.addEventListener('click', function () { document.getElementById('menu-apri').checked = false; }); });</script>
+<script src="js/sito.js" defer></script>
 </body>
 </html>
