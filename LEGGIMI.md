@@ -5,6 +5,6 @@ Si apre con un doppio clic su `index.html` e si pubblica su qualunque hosting st
 
 Da completare prima della pubblicazione:
 - indirizzo e-mail (oggi `info@gestionitech.it`, segnaposto: cambiarlo in `index.html`, 4 punti);
-- dominio (file `CNAME` per GitHub Pages);
+- dominio: www.gestionitech.it (file `CNAME` per GitHub Pages; nel DNS `www` = CNAME verso `<utente>.github.io`, il dominio nudo con i record A di GitHub Pages);
 - partita IVA e sede legale nel pie' di pagina quando la societa' sara' costituita (togliere "in costituzione");
 - privacy e cookie: oggi il sito non raccoglie dati; se si aggiunge un modulo di contatto o strumenti statistici serve l'informativa.
