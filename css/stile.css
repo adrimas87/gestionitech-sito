@@ -224,3 +224,8 @@ p { margin: 0 0 1em; }
 .pagina-testo a { color: var(--ciano); }
 .pagina-testo .aggiornata { font: 500 .8rem "JetBrains Mono", monospace; color: #7C84A6; }
 .piede a { color: #A9B0C7; }
+
+/* Indirizzo e-mail in chiaro e pulsante di copia */
+.invito-email { margin: 26px 0 0; font-family: var(--titoli); font-size: clamp(1.2rem, 3vw, 1.6rem); font-weight: 600; color: var(--titolo); user-select: all; }
+button.pulsante { font-family: inherit; border: 1px solid var(--bordo-forte); }
+button.pulsante.copiato { border-color: #34D399; color: #34D399 !important; }

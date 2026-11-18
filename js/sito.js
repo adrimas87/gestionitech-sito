@@ -45,6 +45,28 @@
     });
   });
 
+  // Copia dell'indirizzo e-mail (il link mailto non fa niente senza un programma di posta)
+  var copia = document.getElementById('copia-email');
+  if (copia) {
+    copia.addEventListener('click', function () {
+      var indirizzo = copia.getAttribute('data-email');
+      function fatto() {
+        copia.textContent = 'Indirizzo copiato ✓';
+        copia.classList.add('copiato');
+        setTimeout(function () { copia.textContent = 'Copia indirizzo'; copia.classList.remove('copiato'); }, 2500);
+      }
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(indirizzo).then(fatto, function () { window.prompt('Copia l'indirizzo:', indirizzo); });
+      } else {
+        var t = document.createElement('textarea');
+        t.value = indirizzo; t.style.position = 'fixed'; t.style.opacity = '0';
+        document.body.appendChild(t); t.select();
+        try { document.execCommand('copy'); fatto(); } catch (e) { window.prompt('Copia l'indirizzo:', indirizzo); }
+        document.body.removeChild(t);
+      }
+    });
+  }
+
   // Terminale che scrive il codice
   var righe = [
     ['c', '// Gestioni Tech: dall\'idea al software'],
